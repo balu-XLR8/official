@@ -14,6 +14,7 @@ import Posts from "./pages/Posts";
 import Messages from "./pages/Messages";
 import Profile from "./pages/Profile";
 import MainLayout from "./components/MainLayout";
+import Notifications from "./pages/Notifications";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="posts" element={<Posts />} />
             <Route path="messages" element={<Messages />} />
             <Route path="profile" element={<Profile />} />
+            <Route path="notifications" element={<Notifications />} />
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
