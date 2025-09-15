@@ -1,5 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 interface StatusCardProps {
   title: string;
@@ -8,14 +7,10 @@ interface StatusCardProps {
 
 export default function StatusCard({ title, count }: StatusCardProps) {
   return (
-    <Card className="cursor-pointer hover:shadow-lg transition-shadow">
-      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-        <CardTitle className="text-lg font-medium">{title}</CardTitle>
-        <ArrowRight className="h-5 w-5 text-muted-foreground" />
-      </CardHeader>
-      <CardContent>
-        <div className="text-3xl font-bold">{count}</div>
-        <p className="text-xs text-muted-foreground">items</p>
+    <Card className="cursor-pointer hover:shadow-lg transition-shadow text-center">
+      <CardContent className="p-4 flex flex-col items-center justify-center">
+        <div className="text-2xl font-bold">{count}</div>
+        <p className="text-sm text-muted-foreground mt-1">{title}</p>
       </CardContent>
     </Card>
   );
