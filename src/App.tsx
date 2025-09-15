@@ -15,6 +15,7 @@ import Messages from "./pages/Messages";
 import Profile from "./pages/Profile";
 import MainLayout from "./components/MainLayout";
 import Notifications from "./pages/Notifications";
+import DirectiveDetailsPage from "./pages/DirectiveDetails";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="completed" element={<Completed />} />
             <Route path="rejected" element={<Rejected />} />
             <Route path="directives" element={<Directives />} />
+            <Route path="directives/:id" element={<DirectiveDetailsPage />} />
             <Route path="analytics" element={<Analytics />} />
             <Route path="posts" element={<Posts />} />
             <Route path="messages" element={<Messages />} />
