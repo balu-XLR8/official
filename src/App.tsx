@@ -13,6 +13,7 @@ import Analytics from "./pages/Analytics";
 import Posts from "./pages/Posts";
 import Messages from "./pages/Messages";
 import Profile from "./pages/Profile";
+import MainLayout from "./components/MainLayout";
 
 const queryClient = new QueryClient();
 
@@ -23,15 +24,17 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/forwarded" element={<Forwarded />} />
-          <Route path="/completed" element={<Completed />} />
-          <Route path="/rejected" element={<Rejected />} />
-          <Route path="/directives" element={<Directives />} />
-          <Route path="/analytics" element={<Analytics />} />
-          <Route path="/posts" element={<Posts />} />
-          <Route path="/messages" element={<Messages />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<Index />} />
+            <Route path="forwarded" element={<Forwarded />} />
+            <Route path="completed" element={<Completed />} />
+            <Route path="rejected" element={<Rejected />} />
+            <Route path="directives" element={<Directives />} />
+            <Route path="analytics" element={<Analytics />} />
+            <Route path="posts" element={<Posts />} />
+            <Route path="messages" element={<Messages />} />
+            <Route path="profile" element={<Profile />} />
+          </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

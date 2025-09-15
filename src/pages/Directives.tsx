@@ -1,14 +1,8 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-
 const DirectivesPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 text-center">
+    <div className="flex flex-col items-center justify-center text-center">
       <h1 className="text-4xl font-bold mb-4">Directives</h1>
-      <p className="text-lg text-muted-foreground mb-8">This page is under construction.</p>
-      <Button asChild>
-        <Link to="/">Go Back to Home</Link>
-      </Button>
+      <p className="text-lg text-muted-foreground">This page is under construction.</p>
     </div>
   );
 };
