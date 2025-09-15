@@ -1,15 +1,17 @@
-import { Header } from "@/components/Header";
-import { BottomNav } from "@/components/BottomNav";
-import { DirectiveList } from "@/components/DirectiveList";
+// Update this page (the content is just a fallback if you fail to update the page)
+
+import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
   return (
-    <div className="relative mx-auto flex min-h-screen w-full max-w-md flex-col border-x bg-background">
-      <Header />
-      <div className="flex-1 overflow-y-auto pb-20"> {/* Padding bottom to avoid overlap with BottomNav */}
-        <DirectiveList />
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
+        <p className="text-xl text-gray-600">
+          Start building your amazing project here!
+        </p>
       </div>
-      <BottomNav />
+      <MadeWithDyad />
     </div>
   );
 };
